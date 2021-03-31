@@ -20,7 +20,7 @@ export default {
         {
           id: 'p1',
           image:
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Books_HD_%288314929977%29.jpg/640px-Books_HD_%288314929977%29.jpg',
+            'https://images-na.ssl-images-amazon.com/images/I/51e7WSnlg-L._SX258_BO1,204,203,200_.jpg',
           title: 'Book Collection',
           description:
             'A collection of must-read books. All-time classics included!',
@@ -29,20 +29,12 @@ export default {
         {
           id: 'p2',
           image:
-            'https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/Tent_at_High_Shelf_Camp_cropped.jpg/640px-Tent_at_High_Shelf_Camp_cropped.jpg',
-          title: 'Mountain Tent',
+            'https://target.scene7.com/is/image/Target/GUEST_8545837b-a3f0-4b9c-81b1-9bc76e889b03?wid=325&hei=325&qlt=80&fmt=webp',
+          title: 'Tent',
           description: 'A tent for the ambitious outdoor tourist.',
-          price: 129.99,
+          price: 89.99,
         },
-        {
-          id: 'p3',
-          image:
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg/640px-Good_Food_Display_-_NCI_Visuals_Online.jpg',
-          title: 'Food Box',
-          description:
-            'May be partially expired when it arrives but at least it is cheap!',
-          price: 6.99,
-        },
+       
       ],
       cart: { items: [], total: 0, qty: 0 },
     };
