@@ -1,19 +1,15 @@
 <template>
- <div class="column is-three-fifths">
-  <section>
-    <ul>
+		<div class="columns is-multiline is-mobile" style="padding-top:30px">
+         <div class="column is-one-quarter" v-bind:key="prod.id" v-for="prod in products">
       <product-item
-        v-for="prod in products"
-        :key="prod.id"
         :id="prod.id"
         :title="prod.title"
         :image="prod.image"
         :description="prod.description"
         :price="prod.price"
       ></product-item>
-    </ul>
-  </section>
-  </div>
+      </div>
+      </div>
 </template>
 
 <script>
@@ -28,10 +24,5 @@ export default {
 </script>
 
 <style scoped>
-  ul {
-    list-style: none;
-    margin: 2rem auto;
-    padding: 0;
-    max-width: 40rem;
-  }
+ 
 </style>

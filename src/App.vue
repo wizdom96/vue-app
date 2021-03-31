@@ -1,6 +1,9 @@
 <template>
   <the-header></the-header>
+
+  <div class="app">
   <router-view></router-view>
+</div>
 </template>
 
 <script>
@@ -107,5 +110,8 @@ html {
 
 body {
   margin: 0;
+}
+.app{  
+  padding: 80px;
 }
 </style>

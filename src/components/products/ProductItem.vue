@@ -1,21 +1,29 @@
 <template>
-  <li class="product">
-    <div class="product__data">
-      <div class="product__image">
-        <img :src="image" :alt="title" />
-      </div>
-      <div class="product__text">
-        <h3>{{ title }}</h3>
-        <base-badge mode="highlight" :no-margin-left="true">
-          <h4>${{ price }}</h4>
-        </base-badge>
-        <p>{{ description }}</p>
-      </div>
-    </div>
-    <div class="product__actions">
-      <button @click="addToCart">Add to Cart</button>
-    </div>
-  </li>
+   
+					<div class="card-image">
+						<figure class="image is-4by3">
+							<img
+								style="height:250px; width:250px; padding:10px; border: 1px solid gray"
+								:src="image"
+								:alt="title"
+							/>
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-content">
+								<p class="title is-4">{{ title }}</p>
+								<p class="subtitle is-6">{{ description }}</p>
+                      <button @click="addToCart">Add to Cart</button>
+								<!-- <router-link
+									tag="button"
+									:to="'/details/' + id"
+									class="button is-info"
+									>Check menu</router-link
+								> -->
+							</div>
+						</div>
+					</div>
 </template>
 
 <script>
