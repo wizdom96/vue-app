@@ -1,12 +1,22 @@
 import { createStore } from 'vuex'
 
+import cartModule from './modules/cart/index'
+import productModule from './modules/product/index'
+import rootGetters from './getters'
+import rootMutations from './mutations'
+import rootActions from './actions'
+
 export default createStore({
-  state: {
+  modules:{
+      prods: productModule,
+      cart: cartModule
   },
-  mutations: {
+  state() {
+    return {
+      isLoggedIn: false
+    };
   },
-  actions: {
-  },
-  modules: {
-  }
+  mutations: rootMutations,
+  actions: rootActions,
+  getters: rootGetters
 })
