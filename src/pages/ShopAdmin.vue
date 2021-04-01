@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Shop Admin</h2>
+    <p>Hello Admin!</p>
   </section>
 </template>
 
@@ -9,7 +9,7 @@ section {
   text-align: center;
   margin: 3rem auto;
   max-width: 40rem;
-  border: 1px solid #ccc;
+  font-size:65px;
   border-radius: 12px;
   padding: 2rem;
 }

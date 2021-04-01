@@ -15,6 +15,9 @@
         <li v-if="isLoggedIn">
           <router-link to="/admin">Admin</router-link>
         </li>
+         <li v-if="isLoggedIn">
+          <router-link to="/products/edit">Edit Products</router-link>
+        </li>
       </ul>
     </nav>
     <div>
@@ -31,7 +34,18 @@ export default {
     qty() {
       return this.$store.getters['cart/qty'];
     },
+    isLoggedIn(){
+      return this.$store.getters['userIsAuthenticated']; 
+    }
 },
+  methods:{
+    login(){
+       this.$store.dispatch('login');
+      },
+      logout(){
+       this.$store.dispatch('logout');
+      }
+  },
 };
 
 </script>

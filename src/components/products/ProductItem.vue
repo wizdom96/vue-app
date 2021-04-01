@@ -15,12 +15,7 @@
 								<p class="title is-4">{{ title }}</p>
 								<p class="subtitle is-6">{{ description }}</p>
                       <button @click="addToCart">Add to Cart</button>
-								<!-- <router-link
-									tag="button"
-									:to="'/details/' + id"
-									class="button is-info"
-									>Check menu</router-link
-								> -->
+                       <button  class="button is-info" @click="viewItem">View</button>
 							</div>
 						</div>
 					</div>
@@ -31,6 +26,9 @@
 export default {
   props: ['id', 'image', 'title', 'price', 'description'],
  methods: {
+ viewItem(){
+   this.$router.push("/details/" + this.id);
+ },
  addToCart() {
    this.$store.dispatch('cart/addProductToCart', {
           id: this.id,
