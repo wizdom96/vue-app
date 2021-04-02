@@ -1,31 +1,18 @@
 <template>
-  <the-header></the-header>
-
+  <the-header></the-header> 
   <div class="app">
   <router-view></router-view>
-</div>
+  </div>
+  <the-footer></the-footer>
 </template>
 
 <script>
 import TheHeader from './components/nav/TheHeader.vue';
-
+import TheFooter from './components/footer/TheFooter.vue'
 export default {
   components: {
-    TheHeader
-  },
-  provide() {
-    return {
-      isLoggedIn: this.isLoggedIn,
-      products: this.products,
-      cart: this.cart,
-      addProductToCart: this.addProductToCart,
-      removeProductFromCart: this.removeProductFromCart,
-      login: this.login,
-      logout: this.logout,
-    };
-  },
-  methods: {
-    
+    TheHeader,
+    TheFooter
   },
 };
 </script>
@@ -43,6 +30,8 @@ body {
   margin: 0;
 }
 .app{  
-  padding: 80px;
+    min-height: calc(100vh - 300px);
+    padding: 100px;
 }
+
 </style>

@@ -13,7 +13,12 @@ export default createStore({
   },
   state() {
     return {
-      isLoggedIn: false
+      isLoggedIn: false,
+      profile: {
+        username: 'Igor Kostadinoski',
+        email: 'admin@example.com'
+
+      }
     };
   },
   mutations: rootMutations,

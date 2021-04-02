@@ -1,7 +1,7 @@
 <template>
   <div class="modal-backdrop">
     <div class="modal">
-    <form @click.prevent="editRecord">
+    <form @click.prevent>
         <div class="field">
             <label class="label"></label>
             <div class="control">
@@ -17,7 +17,7 @@
         <div class="field">
             <label class="label">Price</label>
             <div class="control">
-                <input class="input" v-model="product.price">
+                <input class="input" type="number" v-model="product.price">
             </div>
         </div>
         <div class="field">
@@ -44,7 +44,7 @@ import swal from 'sweetalert';
       let product = {
         id: 0,
         title: '',
-        price:'',
+        price: 0,
         description: '',
         image: ''
       }
@@ -68,7 +68,7 @@ import swal from 'sweetalert';
        if(this.item.id === undefined ){
          if (
 					this.product.title == undefined ||
-						this.product.price == undefined ||
+						this.product.price == 0 ||
 						this.product.image == undefined
 				) {
 					swal("Fail!", "You must fill all required fields.", "error");

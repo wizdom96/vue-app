@@ -1,5 +1,6 @@
 export default {
-    addProduct(state, payload) {  
+    addProduct(state, payload) { 
+      payload.price = parseFloat(payload.price)
       const checkItem = state.items.findIndex(
         (item) => item.productId === payload.id
       );
@@ -18,6 +19,7 @@ export default {
         state.items.push(newItem);
         state.total+=payload.price
         state.qty ++;
+     
       }
   },
 

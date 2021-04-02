@@ -8,15 +8,21 @@
         <li>
           <router-link to="/products">Products</router-link>
         </li>
+         <li>
+          <router-link to="/about">About</router-link>
+        </li>
+        <li>
+          <router-link to="/contact">Contact Us</router-link>
+        </li>
         <li>
           <router-link to="/cart">Cart</router-link>
           <base-badge mode="elegant">{{ qty }}</base-badge>
         </li>
         <li v-if="isLoggedIn">
-          <router-link to="/admin">Admin</router-link>
+          <router-link to="/admin"><b>Admin</b></router-link>
         </li>
          <li v-if="isLoggedIn">
-          <router-link to="/products/edit">Edit Products</router-link>
+          <router-link to="/products/edit"><b> Products</b></router-link>
         </li>
       </ul>
     </nav>
