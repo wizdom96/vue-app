@@ -37,7 +37,7 @@
 									>    
 									<a
 										class="button is-small is-danger"
-										@click="deleteRestaurant(prod.id)"
+										@click="deleteProduct(prod.id)"
 										>Delete</a
 									>
 								</p>
@@ -82,7 +82,7 @@ export default {
 		
       },
         
-        deleteRestaurant(id){swal({
+        deleteProduct(id){swal({
 				title: "Are you sure?",
                 text: "Once deleted, you will not be able to recover Product",
                 icon: "warning",
